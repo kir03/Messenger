@@ -54,6 +54,10 @@ namespace Messanger
                 {
                     _age = 120;
                 }
+                if (value>0 & value<=120)
+                {
+                    _age = value;
+                }
             }
         }
         public Person()
