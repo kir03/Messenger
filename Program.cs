@@ -20,7 +20,7 @@ namespace Messanger // Note: actual namespace depends on the project name.
         static void Main(string[] args)
         {
             List<string> list = new List<string>();
-            int count=0,choisemenu,choiseadd,Age,Year,Delete;
+            int choisemenu,choiseadd,Age,Year,Delete;
             string Name,Surname,Model;
             do
             {
@@ -34,7 +34,9 @@ namespace Messanger // Note: actual namespace depends on the project name.
                 {
                     Console.Clear();
                     for (int i = 0; i < list.Count; i++)
-                        Console.WriteLine($"{i+1}. {list[i]}");
+                    {
+                        Console.WriteLine($"{i + 1}. {list[i]}");
+                    }
                     Console.WriteLine("Press enter to continue");
                     Console.ReadLine();
                 }
@@ -45,7 +47,6 @@ namespace Messanger // Note: actual namespace depends on the project name.
                     Console.WriteLine($"{(int)Addmenu.Person}. {Addmenu.Person}");
                     Console.WriteLine($"{(int)Addmenu.Car}. {Addmenu.Car}");
                     int.TryParse(Console.ReadLine(), out choiseadd);
-                    count++;
                     if (choiseadd == 1)
                     {
                         
@@ -86,14 +87,18 @@ namespace Messanger // Note: actual namespace depends on the project name.
                 {
                     Console.Clear();
                     for (int i = 0; i < list.Count; i++)
+                    {
                         Console.WriteLine($"{i + 1}. {list[i]}");
+                    }
                     Console.WriteLine("Which element do you want to delete?");
                     int.TryParse(Console.ReadLine(), out Delete);
                     list.RemoveAt(Delete - 1);
                     Console.Clear();
                     Console.WriteLine("Your modified list:");
                     for (int i = 0; i < list.Count; i++)
+                    {
                         Console.WriteLine($"{i + 1}. {list[i]}");
+                    }
                     Console.WriteLine("Press enter to continue");
                     Console.ReadLine();
                 }
